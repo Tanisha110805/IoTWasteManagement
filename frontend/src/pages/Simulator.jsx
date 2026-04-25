@@ -1,9 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { Play, Square } from 'lucide-react';
 
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Simulator() {
   const [running, setRunning] = useState(false);

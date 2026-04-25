@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios, { API } from '../api';
 import { Trash2 } from 'lucide-react';
 
 export default function Login({ setToken }) {
@@ -12,7 +12,7 @@ export default function Login({ setToken }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/login', { username, password });
+      const res = await axios.post(`${API}/login`, { username, password });
       setToken(res.data.token);
       localStorage.setItem('token', res.data.token);
       navigate('/');

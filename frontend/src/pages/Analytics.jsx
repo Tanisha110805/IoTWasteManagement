@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 const COLORS = ['#10b981', '#06b6d4', '#f59e0b', '#ef4444'];
 
 export default function Analytics() {

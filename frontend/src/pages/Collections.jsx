@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { Truck, Plus, X } from 'lucide-react';
 
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Collections() {
   const [collections, setCollections] = useState([]);

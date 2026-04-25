@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 const createIcon = (color) => {
   return L.divIcon({

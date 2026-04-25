@@ -1,11 +1,8 @@
 /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { Trash2, AlertTriangle, CheckCircle, ThermometerSun, Droplets, Activity, TrendingUp, MapPin } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Dashboard() {
   const [data, setData] = useState(null);

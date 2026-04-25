@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { API, auth } from '../api';
 import { AlertTriangle, AlertCircle, Info, Check } from 'lucide-react';
 
-const API = '/api';
-const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Notifications() {
   const [notifications, setNotifications] = useState([]);
