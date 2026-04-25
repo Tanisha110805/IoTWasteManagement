@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Play, Square } from 'lucide-react';
 
-const API = 'http://localhost:3001/api';
+const API = '/api';
 const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Simulator() {

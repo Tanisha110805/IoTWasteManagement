@@ -12,7 +12,7 @@ export default function Login({ setToken }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/api/login', { username, password });
+      const res = await axios.post('/api/login', { username, password });
       setToken(res.data.token);
       localStorage.setItem('token', res.data.token);
       navigate('/');

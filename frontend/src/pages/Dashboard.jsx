@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Trash2, AlertTriangle, CheckCircle, ThermometerSun, Droplets, Activity, TrendingUp, MapPin } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const API = 'http://localhost:3001/api';
+const API = '/api';
 const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Dashboard() {

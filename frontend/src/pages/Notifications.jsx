@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AlertTriangle, AlertCircle, Info, Check } from 'lucide-react';
 
-const API = 'http://localhost:3001/api';
+const API = '/api';
 const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 export default function Notifications() {

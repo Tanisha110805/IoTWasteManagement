@@ -22,9 +22,18 @@ This project proposes a solution to this waste problem by managing the garbage w
 - `/backend`: Contains the Node.js/Express server and SQLite database.
 - `/frontend`: Contains the modern React/Vite dashboard.
 
-## How to Run Locally
+## How to Deploy
 
-### 1. Backend Service
+📖 **See [DEPLOYMENT.md](DEPLOYMENT.md) for the complete, step-by-step deployment guide** covering:
+- ✅ Local development setup
+- 🐳 Docker Compose (one-command deploy)
+- ☁️ Free cloud deployment (Render + Vercel)
+- 🖥️ VPS deployment (DigitalOcean / AWS)
+- 🔧 Arduino & NodeMCU firmware flashing
+
+### Quick Start (Local)
+
+**Terminal 1 — Backend:**
 ```bash
 cd backend
 npm install
@@ -32,22 +41,21 @@ npm start
 ```
 The backend will run on `http://localhost:3001`.
 
-### 2. Frontend Application
+**Terminal 2 — Frontend:**
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-The frontend will run on `http://localhost:5173`. You can log in with:
+The frontend will run on `http://localhost:5173`. Login with:
 - **Username:** `admin`
 - **Password:** `vvit@123`
 
-### 3. Firmware Setup
-1. Open `firmware/nodemcu/nodemcu.ino` in the Arduino IDE.
-2. Update the Wi-Fi credentials.
-3. Update the `serverName` variable with the local IP address of the machine running your Node.js backend.
-4. Upload `arduino.ino` to the Arduino Uno.
-5. Upload `nodemcu.ino` to the NodeMCU.
+**Docker (one command):**
+```bash
+docker compose up --build -d
+# Open http://localhost
+```
 
 ## Hardware Requirements
 
